@@ -1,61 +1,24 @@
-<h1>Just a simple email sender</h1>
+<h1>Enviar un correo</h1>
 
-<p>This project is to showcase Servlets, JSPs and JSTL. Based on
-	Maven, Hibernate, HSQLDB, JavaMail, Twitter Bootstrap and JQuery</p>
-
-<p>
-	<strong>Important notice!</strong> This project is without Spring,
-	which would make configuration and service layer much more easier, but
-	it would also increase basic knowledge at my trainings. This example is
-	an entry-level example, so don't expect perfect Java EE architecture
-	(it isn't) :-)
-</p>
-
-<p>This project contains embedded HSQL database, which destroys all
-	data at shutdown. If you want different database, add JDBC driver to
-	pom.xml and change META-INF/persistence.xml.</p>
+<p>Teste proyecto es para practicar, JSPs y JSTL. Hecho con
+	Maven, HSQLDB, JavaMail, Twitter Bootstrap y JQuery</p>
 
 <p>
-	To send emails you must set SMTP server configuration (in
-	email.properties). At training we use <a
-		href="http://www.mandrillapp.com">http://www.mandrillapp.com</a>,
-	which offers free SMTP server, but you can provide your own. Also set
-	preview = false (also in email.properties).
-</p>
+Todo esto sería mucho más facil hacerlo con Spring pero para empezar es mejor conocer
+como trabaja un Servlet.
+	Es una tecnología que nos permite crear aplicaciones web interactivas (dinámicas), es decir, le permite al usuario interactuar con la aplicación (hacer consultas, insertar y eliminar datos, …)
 
-<p>If set preview = true in email.properties, preview database with
-	test data will be created upon application deployment. Preview database
-	will be re-initialized once per day.</p>
+<strong>Un Servlet</strong> es un objeto java que pertenece a una clase que extiende de javax.servlet.http.HttpServlet
 
-<p>
-	How to run:
-	<code>mvn jetty:run</code>
-</p>
+Son pequeños programas escritos en Java que admiten peticiones a través del protocolo HTTP. Los servlets reciben peticiones desde un navegador web, las procesan y devuelven una respuesta al navegador, normalmente en HTML. Para realizar estas tareas podrán utilizar las clases incluidas en el lenguaje Java. Estos programas son los intermediarios entre el cliente (casi siempre navegador web) y los datos (BBDD)
+¿Cómo funciona un contenedor de Servlets?
 
-<p>
-	How to build WAR file:
-	<code>mvn package</code>
-</p>
+1. El navegador (cliente) pide una página al servidor HTTP que es un contenedor de Servlets.
 
-<p>
-	You can deploy this web application to <a href="http://www.heroku.com"
-		target="_blank">Heroku</a>. Live preview is here: <a
-		href="http://example-contact-form.jiripinkas.cz" target="_blank">http://example-contact-form.jiripinkas.cz</a>
-</p>
+2. El servlet procesa los argumentos de la petición, es decir, el contenedor de Servlets delega la petición a un Servlet en particular elegido de entre los Servlets que contiene.
 
-<h2>My other projects:</h2>
+3. El Servlet, que es una objeto java, se encarga de generar el texto de la página web que se entrega al contenedor.
 
-<ul>
-	<li><a href="http://www.javavids.com" target="_blank"
-		title="Java video tutorials">Java video tutorials</a> (free online
-		tutorials)</li>
-	<li><a href="http://www.dipgen.com" target="_blank"
-		title="Diploma Generator">Diploma Generator</a> (free OSS software)</li>
-	<li><a href="http://sitemonitoring.sourceforge.net/"
-		target="_blank" title="Website monitoring software">Website
-			monitoring software</a> (free OSS software)</li>
-	<li><a href="http://www.java-skoleni.cz" target="_blank"
-		title="Java �kolen�">Java �kolen�</a> (in Czech)</li>
-	<li><a href="http://www.sql-skoleni.cz" target="_blank"
-		title="Java �kolen�">SQL �kolen�</a> (in Czech)</li>
-</ul>
+4. El contenedor devuelve la página web al navegador (cliente) que la solicitó, normalmente en HTML.
+
+Por lo tanto nos encontramos en una arquitectura Cliente-Servidor. Lo normal para esto es utilizar Apache Tomcat como contenedor de servlets. Recordar que apache es un servidor HTTP.
