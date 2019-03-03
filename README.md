@@ -1,6 +1,6 @@
 <h1>Enviar un correo</h1>
 
-<p>Teste proyecto es para practicar, JSPs y JSTL. Hecho con
+<p>Este proyecto es para practicar, JSPs y JSTL. Hecho con
 	Maven, HSQLDB, JavaMail, Twitter Bootstrap y JQuery</p>
 
 <p>
