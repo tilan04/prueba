@@ -33,6 +33,12 @@
 					<c:url var="listEmailsUrl" value="/list-emails.html" />
 					<li ${param.page == 'emails' ? 'class="active"' : ''}><a
 						href="${listEmailsUrl}">Lista de correos</a></li>
+					<c:url var="introWeb" value="/intro-webs.jsp" />
+					<li ${param.page == 'introwebs' ? 'class="active"' : ''}><a
+						href="${introWeb}">Introducir webs</a></li>
+					<c:url var="listWebsUrl" value="/list-webs.html" />
+					<li ${param.page == 'webs' ? 'class="active"' : ''}><a
+						href="${listWebsUrl}">Lista de webs</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->

@@ -4,7 +4,7 @@
 <footer>
 	<br /> <br />
 	<p>
-	Aplicación que envía correos
+	Aplicación que envía correos y guarda páginas web.
 	</p>
 </footer>
 
